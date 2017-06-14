@@ -3,97 +3,111 @@ package com.example.android.reportcard;
 import android.util.Log;
 
 import static android.R.attr.name;
+import static android.support.v7.widget.AppCompatDrawableManager.get;
 
 /**
  * Created by Niamh on 13/06/2017.
+ * A class to create a report card for the modules i sat this year in my degree. The marks are awarded numerically out of 100 and so int values used.
  */
 
 public class ReportCard {
 
-    private int highFrequencySystems;
-    private int embeddedSystems;
-    private int connectedHealth;
-    private int digitalSystems;
-    private String hfs="High Frequency Systems";
-    private String es="Embedded Systems";
-    private String ch="Connected Health";
-    private String ds="Digital Systems";
+    private int highFrequencySystemsMark;
+    private int embeddedSystemsMark;
+    private int connectedHealthMark;
+    private int digitalSystemsMark;
+    private String highFrequencySystems="High Frequency Systems";
+    private String embeddedSystems="Embedded Systems";
+    private String connectedHealth="Connected Health";
+    private String digitalSystems="Digital Systems";
 
     public ReportCard(int highFrequencySystems, int embeddedSystems, int connectedHealth, int digitalSystems) {
-        this.highFrequencySystems = highFrequencySystems;
-        this.embeddedSystems = embeddedSystems;
-        this.connectedHealth = connectedHealth;
-        this.digitalSystems = digitalSystems;
+        this.highFrequencySystemsMark = highFrequencySystemsMark;
+        this.embeddedSystemsMark = embeddedSystemsMark;
+        this.connectedHealthMark = connectedHealthMark;
+        this.digitalSystemsMark = digitalSystemsMark;
     }
 
-    public void setHighFrequencySystems(int highFrequencySystems) {
+    public void setHighFrequencySystemsMark(int highFrequencySystemsMark) {
+        this.highFrequencySystemsMark = highFrequencySystemsMark;
+    }
+
+    public int getHighFrequencySystemsMark() {
+
+        return highFrequencySystemsMark;
+    }
+
+    public void setEmbeddedSystemsMark(int embeddedSystemsMark) {
+        this.embeddedSystemsMark = embeddedSystemsMark;
+    }
+
+    public int getEmbeddedSystemsMark() {
+
+        return embeddedSystemsMark;
+    }
+    public void setConnectedHealthMark(int connectedHealth) {
+        this.connectedHealthMark = connectedHealthMark;
+    }
+
+    public int getConnectedHealthMark() {
+
+        return connectedHealthMark;
+    }
+    public void setDigitalSystemsMark(int digitalSystems) {
+
+        this.digitalSystemsMark = digitalSystemsMark;
+    }
+
+    public int getDigitalSystemsMark() {
+
+        return digitalSystemsMark;
+    }
+
+    public void setHighFrequencySystems(String highFrequencySystems) {
+
         this.highFrequencySystems = highFrequencySystems;
     }
 
-    public int getHighFrequencySystems() {
+    public String getHighFrequencySystems() {
+
         return highFrequencySystems;
     }
 
-    public void setEmbeddedSystems(int embeddedSystems) {
+    public void setEmbeddedSystems(String embeddedSystems) {
+
         this.embeddedSystems = embeddedSystems;
     }
 
-    public int getEmbeddedSystems() {
+    public String getEmbeddedSystems() {
+
         return embeddedSystems;
     }
-    public void setConnectedHealth(int connectedHealth) {
+
+    public void setConnectedHealth(String connectedHealth) {
+
         this.connectedHealth = connectedHealth;
     }
 
-    public int getConnectedHealth() {
+    public String getConnectedHealth() {
+
         return connectedHealth;
     }
-    public void setDigitalSystems(int digitalSystems) {
+
+    public void setDigitalSystems(String digitalSystems) {
+
         this.digitalSystems = digitalSystems;
     }
 
-    public int getDigitalSystems() {
+    public String getDigitalSystems() {
         return digitalSystems;
-    }
-
-    public void setHfs(String hfs) {
-        this.hfs = hfs;
-    }
-
-    public String getHfs() {
-        return hfs;
-    }
-
-    public void setEs(String es) {
-        this.es = es;
-    }
-
-    public String getEs() {
-        return es;
-    }
-
-    public void setCh(String ch) {
-        this.ch = ch;
-    }
-
-    public String getCh() {
-        return ch;
-    }
-
-    public void setDs(String ds) {
-        this.ds = ds;
-    }
-
-    public String getDs() {
-        return ds;
     }
 
     @Override
     public String toString() {
         return "ReportCard - " + '\'' +
-                getHfs() + " : " + getHighFrequencySystems() +
-                getEs() + " : " + getEmbeddedSystems() +
-                getCh() +" : " + getConnectedHealth() +
-                getDs() + " : " + getDigitalSystems() ;
+                getHighFrequencySystemsMark() + " : " + getHighFrequencySystems() +
+                getHighFrequencySystemsMark() + " : " + getEmbeddedSystems() +
+                getHighFrequencySystemsMark() +" : " + getConnectedHealth() +
+                getDigitalSystemsMark() + " : " + getDigitalSystems() ;
     }
 }
